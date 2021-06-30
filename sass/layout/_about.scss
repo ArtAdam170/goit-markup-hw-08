@@ -1,0 +1,52 @@
+/*about-section-----------------------------------------------*/
+.about {
+  background: var(--logo-color);
+    &__header {
+      margin-bottom: 50px;
+      text-align: center;
+      font-size: 36px;
+      line-height: 1.16;
+      letter-spacing: 0.03em;
+    }
+    
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+    
+    &__item {
+      position: relative;
+      flex-basis: calc ((100% - 90) / 3);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+    
+    &__img-text {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    
+      display: flex;
+      width: 370px;
+      height: 70px;
+      justify-content: center;
+      align-items: center;
+    
+      font-size: 14px;
+      line-height: 16px;
+    
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--logo-color);
+      background: rgba(47, 48, 58, 0.8);
+    }
+}
+//смартфон  480+, планшет  768+ 
+  @media screen and (max-width: 1199px) {
+      .about {
+        display: none;
+      }  
+    }
+  /*about-END--------------------------------------------------*/

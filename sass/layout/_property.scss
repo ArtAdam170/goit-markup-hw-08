@@ -1,0 +1,154 @@
+/*property-section-------------------------------------------*/
+.property {
+  background: var(--logo-color);
+
+  &__header {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    color: var(--tel-mail-color);
+  }
+
+  &__icon-background {
+    background-color: #f5f4fa;
+  }
+}
+
+//смартфон  480+ 
+@media screen and (max-width: 767px) {
+  .property {
+      &__container {
+        padding-top:60px;
+        padding-bottom: 60px; 
+      }
+
+     &__header {
+       text-align: center;
+       margin-bottom: 10px;
+     }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+    }
+
+     
+    &__item:not(:last-child){
+      margin-bottom: 30px;
+    }
+    
+
+    &__icon-background {
+      display: flex;
+      justify-content: center;
+      padding: 25px 142px;      
+      background-color: #f5f4fa;
+      margin-bottom: 30px;
+    }
+
+    &__header {
+      display: block;
+    }
+  }
+}
+
+
+
+//планшет  768+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .property {
+      &__container {
+        padding-bottom: 60px;
+      }
+
+     &__header {
+       margin-bottom: 10px;
+     }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-right: -30px;
+      margin-bottom: -30px;
+    }
+
+     &__item {
+      margin-right: 30px;
+      margin-bottom: 30px;
+       flex-basis: calc((100% - 60px) / 2);
+    }
+
+    &__item:not(:last-child) {
+       margin-right: 30px;
+      margin-bottom: 30px;
+    }
+
+    &__icon-background {
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+      margin-bottom: 25px;
+      width: 354px;
+      height: 120px;
+    }
+
+    &__header {
+      display: block;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    
+      
+    
+  }
+
+}
+
+//пк  1200+
+@media screen and (min-width: 1200px) {
+  .property {
+    padding-top: 94px;
+    background: var(--logo-color);
+
+    &__header {
+      margin-bottom: 10px;
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    
+
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    
+       &__icon-background {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;   
+      background-color: #f5f4fa;
+      margin-bottom: 25px;
+      width: 270px;
+      height: 120px;
+    }
+  }
+}
+/*property-END------------------------------------------------*/

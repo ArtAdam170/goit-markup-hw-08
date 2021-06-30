@@ -1,0 +1,127 @@
+/*example-section------------------------------------------------*/
+
+.example {
+
+  &__item:hover,
+  &__item:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    background: var(--logo-color);
+  }
+
+  &__img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+   
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+
+    transform: translatey(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--animation-timing-function);
+    transition-delay: 0ms;
+
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--logo-color);
+    background: rgba(33, 150, 243, 0.9);
+    overflow: auto;
+  }
+
+  &__link {
+    outline: none;
+  }
+
+  &__link:hover &__overlay-text,
+  &__link:focus &__overlay-text {
+    transform: translatey(0);
+    
+  }
+
+  &__content {
+    padding: 20px 24px;
+    background: var(--logo-color);
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &__name {
+    margin-bottom: 4px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--text-color);
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: 0.03em;
+    color: var(--tel-mail-color);
+  }
+}
+
+//смартфон 480+
+@media screen and (max-width: 767px) {
+  .example{
+      &__list {
+          display: flex;
+          flex-direction: column;
+      }
+
+      &__item:not(:last-child) {
+      margin-bottom: 30px;
+      }
+  }
+}
+
+//планшет  768+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+.example {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+      
+    &__item {
+      flex-basis: calc ((100% - 2* 60) / 2);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+
+//ПК 1200+
+@media screen and (min-width: 1200px) {
+  .example {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-top: -30px;
+    }
+      
+    &__item {
+      flex-basis: calc ((100% - 3* 30) / 3);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+  }
+}
+    /*example-section------------------------------------------------*/
+    /*============PORTFOLIO END==========*/

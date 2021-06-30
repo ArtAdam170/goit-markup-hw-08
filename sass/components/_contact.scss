@@ -1,0 +1,77 @@
+.contact {
+  // @extend %display-list;
+  display: flex;
+  margin-left: auto;
+
+    &__icon:hover,
+    .contact__icon:focus {
+      fill: currentColor;
+    }
+    
+    &__mail:hover,
+    &__mail:focus {
+      color: var(--accent-color);
+    }
+    
+    &__tel:hover,
+    &__tel:focus {
+      color: var(--accent-color);
+    }
+    
+    &__mail,
+    &__tel {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 1.16;
+      letter-spacing: 0.02em;
+      color: var(--tel-mail-color);
+      transition-property: color;
+      transition-duration: 250ms;
+      transition-timing-function: var(--animation-timing-function);
+      transition-delay: 0ms;
+    }
+}
+
+//смартфон  480+ 
+@media screen and (max-width: 767px) {
+  .contact {
+  display: none;
+  }
+}
+
+//планшет  678+ 
+@media screen and (min-width: 767px) and (max-width:1199px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+     margin-left: auto;
+    
+    &__icon {
+      margin-right: 10px;
+      fill: currentColor;
+    }
+
+     &__item:not(:last-child) {
+      margin-bottom: 10px;
+    } 
+  }
+}
+
+//пк+ 
+@media screen and (min-width: 1200px) {
+  .contact {
+    // @extend %display-list;
+    display: flex;
+    margin-left: auto;
+
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+    
+    &__icon {
+      margin-right: 10px;
+      fill: currentColor;
+    }
+  }
+}

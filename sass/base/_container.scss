@@ -1,0 +1,27 @@
+.container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+//смартфон  480+ 
+@media screen and (min-width: 480px) {
+  .container {
+  width: 480px;
+  }
+}
+
+//планшет  768+ 
+@media screen and (min-width: 768px) {
+  .container {
+  width: 768px;
+  }
+}
+
+//пк  1200+ 
+@media screen and (min-width: 1200px) {
+  .container {
+  width: 1200px;
+  }
+}

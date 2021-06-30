@@ -1,0 +1,67 @@
+/*==========HEADER==========*/
+.header {
+  border: 1px solid hsl(0, 0%, 93%);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__mobile-menu-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  &__mobile-menu-icon {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+  }
+}
+
+.header__mobile-menu-button {
+  &:hover,
+  &:focus {
+    .header__mobile-menu-icon {
+      fill: var(--accent-color);
+    }
+  }
+}
+
+//смартфон  480+
+@media screen and (max-width: 767px) {
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+//смартфон  480+
+@media screen and (min-width: 767px) and (max-width:3000px) {
+  .header__mobile-menu-button {
+  display: none;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width:1199px) {
+  .header {
+    &__container {
+    display: flex;
+     justify-content: space-between;
+    }
+  }
+}
+
+//пк  1200+
+@media screen and (min-width: 2000px) {
+  .header {
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+/*==========HEADER END==========*/
